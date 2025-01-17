@@ -4,16 +4,16 @@ body {
 }
 
 a {
-    color: goldenrod;
+    color: #c52a78;
 }
 
 h2 {
-    color: goldenrod;
+    color: #c52a78;
     font-family: 'Special Elite', cursive;
 }
 
 h3 {
-    color: goldenrod;
+    color: #c52a78;
     margin-bottom: 5px;
     margin-top: 30px;
     font-family: 'Special Elite', cursive;
@@ -74,7 +74,7 @@ button:hover {
     width: 65%;
     margin: auto;
     padding: 20px;
-    border: 2px solid goldenrod;
+    border: 2px solid #c52a78;
     text-align: center;
     color: white;
 }
@@ -124,7 +124,7 @@ button:hover {
         margin: auto;
         margin-top: none;
         padding: 10px;
-        border: 2px solid goldenrod;
+        border: 2px solid #c52a78;
         text-align: center;
         color: white;
     }

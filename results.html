@@ -35,16 +35,44 @@
                 <h3 id="elementResultName" class="whiteH3"></h3>
 
                 <a href=""><img class="img" id="elementResult" src="" alt="Imagem do elemento resultado no teste"></a>
+                <!-- <p class="centerP" id="fraseGuia"></p> -->
+
+                <!-- <h3>Seu Espectro</h3> -->
+                <!-- <div class="userEspectro"> -->
+                <!--     <div class="userRow"> -->
+                <!--         <h4>Emoção</h4> -->
+                <!--         <p id="emocValue" class="espectroValue"></p> -->
+                <!--     </div> -->
+                <!---->
+                <!--     <div class="userRow"> -->
+                <!--         <h4>Tempo</h4> -->
+                <!--         <p id="soliValue" class="espectroValue"></p> -->
+                <!--     </div> -->
+                <!---->
+                <!--     <div class="userRow"> -->
+                <!--         <h4>Razão</h4> -->
+                <!--         <p id="ordeValue" class="espectroValue"></p> -->
+                <!--     </div> -->
+                <!---->
+                <!--     <div class="userRow"> -->
+                <!--         <h4>Caos</h4> -->
+                <!--         <p id="caosValue" class="espectroValue"></p> -->
+                <!--     </div> -->
+                <!-- </div> -->
 
                 <h3>Descrição</h3>
                 <p id="descElement" class="centerP"></p><br>
+
+                <a href="index.html">
+                    <button class="start">Fazer denovo</button>
+                </a><br><br>
             </div>
 
             <h3>Obrigado por realizar o teste!</h3>
         </div>
 
         <div class="socials">
-            <a href="https://github.com/Kizzyan/4elementos-subathon"><img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial"></a>
+            <a href=""><img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial"></a>
         </div>
 
         <script>
@@ -86,15 +114,22 @@
                 img.src = `images/elementos/${localStorage.getItem("results")}.webp`
                 img.classList.add(`${localStorage.getItem("results")}Result`);
 
+                // let userGuia;
+                // if(localStorage.getItem("results") === "PixEscorregadio") {userGuia = elements.PixEscorregadio.fraseGuia} else 
+                // if(localStorage.getItem("results") === "BaileInsano") {userGuia = elements.BaileInsano.fraseGuia} else 
+                // if(localStorage.getItem("results") === "ehehe") {userGuia = elements.ehehe.fraseGuia} else
+                // if(localStorage.getItem("results") === "WAJAJA") {userGuia = elements.WAJAJA.fraseGuia} 
+                // else {userGuia = elements.pixjumpscare.fraseGuia}
+
                 let userDesc;
-                if(localStorage.getItem("results") === "PixEscorregadio") {userDesc = elements.PixEscorregadio.desc} else 
-                if(localStorage.getItem("results") === "BaileInsano") {userDesc = elements.BaileInsano.desc} else 
+                if(localStorage.getItem("results") === "PixEscorregadio") {userDesc = elements.PixEscorregadio.desc} else
+                if(localStorage.getItem("results") === "BaileInsano") {userDesc = elements.BaileInsano.desc} else
                 if(localStorage.getItem("results") === "ehehe") {userDesc = elements.ehehe.desc} else
-                if(localStorage.getItem("results") === "WAJAJA") {userDesc = elements.WAJAJA.desc} 
+                if(localStorage.getItem("results") === "WAJAJA") {userDesc = elements.WAJAJA.desc}
                 else {userDesc = elements.pixjumpscare.desc}
 
                 document.getElementById("elementResultName").innerHTML = localStorage.getItem("results");
-                document.getElementById("fraseGuia").innerHTML = `"${userGuia}"`;
+                // document.getElementById("fraseGuia").innerHTML = `"${userGuia}"`;
                 document.getElementById("descElement").innerHTML = userDesc;
 
                 let originalString = localStorage.getItem("espectro")
