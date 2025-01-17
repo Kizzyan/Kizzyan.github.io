@@ -11,7 +11,7 @@ questions = [
   },
   {
     "id": 2,
-    "question": "Você raramente reflete as consequências de suas mensagens.",
+    "question": "Você raramente reflete as consequências de seus pixes.",
     "effect": {
       "emocao": 1,
       "solidao": -1,
@@ -91,7 +91,7 @@ questions = [
   },
   {
     "id": 10,
-    "question": "Você geralmente faz a conta de quantos dias tem no timer mesmo que ela machuque alguém.",
+    "question": "Você geralmente zoa quando erram emote mesmo que isso machuque alguém.",
     "effect": {
       "emocao": -1,
       "solidao": 1,
@@ -101,7 +101,7 @@ questions = [
   },
   {
     "id": 11,
-    "question": "Você seguiria uma streak de música no sync mesmo se ela ferisse os outros.",
+    "question": "Você seguiria uma ordem de músicas no sync mesmo se ela ferisse os seus valores moreais.",
     "effect": {
       "emocao": 2,
       "solidao": -2,
@@ -131,7 +131,7 @@ questions = [
   },
   {
     "id": 14,
-    "question": "Pessoas que são mais lentas que você te estressam.",
+    "question": "Pessoas que pedem para você aumentar o timer te estressam.",
     "effect": {
       "emocao": -2,
       "solidao": 2,
@@ -181,7 +181,7 @@ questions = [
   },
   {
     "id": 19,
-    "question": "Se o resultado for positivo, pouco importa a qualidade da produção.",
+    "question": "Se o resultado for engraçado, pouco importa a qualidade da produção.",
     "effect": {
       "emocao": 1,
       "solidao": -1,
@@ -191,7 +191,7 @@ questions = [
   },
   {
     "id": 20,
-    "question": "Você não se esforça em planejar mensagens.",
+    "question": "Você não se esforça em planejar contas engraçadas.",
     "effect": {
       "emocao": 1,
       "solidao": -1,
