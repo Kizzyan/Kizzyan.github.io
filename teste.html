@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.webp">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
-        <link rel="shortcut icon" href="images/elementos/WAJAJA.webp" type="image/x-icon">
+        <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
         <link rel="stylesheet" href="styles/quiz.css">
         <title>4Elementos da Subathon</title>
 
@@ -15,10 +16,10 @@
         <script type="application/javascript" src="elements.js"></script>
     </head>
 
-    <body>    
+    <body>
         <div class="quiz-container">
             <div class="title">
-                <h2>4Elementos - Teste de Afinidade</h2>
+                <h2>4Elementos da Subathon</h2>
             </div>
             <div class="recomendation">
                 <p>Recomendamos fortemente que você evite em marcar a opção "neutro" para um resultado mais preciso do teste. Utilize o botão voltar para mudar sua ÚLTIMA resposta, se precisar.</p>
@@ -33,19 +34,19 @@
                 <label class="option">
                     <input type="button" name="option" id="b1" value="Concordo completamente" onclick="next(2)"/>
                 </label><br>
-                
+
                 <label class="option">
                     <input type="button" name="option" id="b2" value="Concordo" onclick="next(1)"/>
                 </label><br>
-                
+
                 <label class="option">
                     <input type="button" name="option" id="b3" value="Neutro" onclick="next(0)"/>
                 </label><br>
-    
+
                 <label class="option">
                     <input type="button" name="option" id="b4" value="Discordo" onclick="next(-1)"/>
                 </label><br>
-    
+
                 <label class="option">
                     <input type="button" name="option" id="b5" value="Discordo completamente" onclick="next(-2)"/>
                 </label><br>
@@ -59,7 +60,7 @@
         <div class="endTest">
             <h2>4Elementos - Fim do teste</h2>
             <p>Digite seu nome para uma personalização na página de resultados. Essa é uma etapa opcional, essa informação será registrada apenas no seu próprio navegador.</p>
-        
+
             <input type="text" id="uname" class="inputName" placeholder="Digite seu nome..." maxlength="20"></input><br>
             <input type="submit" name="postButton" class="sendButton" value="Enviar Respostas" onclick="sendResults()"></input>
         </div>
@@ -204,15 +205,15 @@
                     where = arr.indexOf(max)
                     let array = [];
 
-                    if(where === 0) { array = ['BaileInsano']} else 
-                    if(where === 1) { array = ['PixEscorregadio']} else 
+                    if(where === 0) { array = ['BaileInsano']} else
+                    if(where === 1) { array = ['PixEscorregadio']} else
                     if(where === 2) { array = ['WAJAJA'] }
                     else { array = ['ehehe'] }
 
-                    if(compWith[0] === max) { array.push('BaileInsano')}  
-                    if(compWith[1] === max) { array.push('PixEscorregadio')}  
-                    if(compWith[2] === max) { array.push('WAJAJA')}  
-                    if(compWith[3] === max) { array.push('ehehe')}  
+                    if(compWith[0] === max) { array.push('BaileInsano')}
+                    if(compWith[1] === max) { array.push('PixEscorregadio')}
+                    if(compWith[2] === max) { array.push('WAJAJA')}
+                    if(compWith[3] === max) { array.push('ehehe')}
 
                     let drawned = array.shift()
                     return array;
@@ -238,7 +239,7 @@
 
                 if(bool === true) {
                     const drawned = drawnedElements(userEspectroPer, userEspectroPer)
-                    
+
                     if (drawned.length === 4) {
                         resultEsp = "pixjumpscare"
                     } else {

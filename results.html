@@ -4,10 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="images/elementos/WAJAJA.webp" type="image/x-icon">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.webp">
+        <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/results.css">
         <link rel="stylesheet" href="styles/elementos.css">
         <title>4Elementos</title>
@@ -42,6 +43,8 @@
                 <a href="index.html">
                     <button class="start">Fazer denovo</button>
                 </a><br><br>
+
+                <p>Test</p>
             </div>
 
             <h3>Obrigado por realizar o teste!</h3>
@@ -59,12 +62,12 @@
                     const espectro = localStorage.getItem("espectro")
 
                     if(!result && !espectro) {
-                        showErrors() 
+                        showErrors()
                     } else{
                         showResults()
                     }
                 } else {
-                    showErrors() 
+                    showErrors()
                 }
                 }, 50);
 
@@ -116,11 +119,11 @@
 
                 let otherElementInfo;
 
-                if(localStorage.getItem("results") === "PixEscorregadio") {otherElementInfo = elements.PixEscorregadio.outrasInfo} else 
-                if(localStorage.getItem("results") === "BaileInsano") {otherElementInfo = elements.BaileInsano.outrasInfo} else 
+                if(localStorage.getItem("results") === "PixEscorregadio") {otherElementInfo = elements.PixEscorregadio.outrasInfo} else
+                if(localStorage.getItem("results") === "BaileInsano") {otherElementInfo = elements.BaileInsano.outrasInfo} else
                 if(localStorage.getItem("results") === "ehehe") {otherElementInfo = elements.ehehe.outrasInfo} else
-                if(localStorage.getItem("results") === "WAJAJA") {otherElementInfo = elements.WAJAJA.outrasInfo} 
-                else {otherElementInfo = elements.pixjumpscare.outrasInfo} 
+                if(localStorage.getItem("results") === "WAJAJA") {otherElementInfo = elements.WAJAJA.outrasInfo}
+                else {otherElementInfo = elements.pixjumpscare.outrasInfo}
 
                 document.getElementById("known1").innerHTML = `${otherElementInfo.agts.agt_1}`;
                 document.getElementById("known2").innerHTML = `${otherElementInfo.agts.agt_2}`;
