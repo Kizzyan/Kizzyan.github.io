@@ -1,140 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="/images/favicon.webp">
-        <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/results.css">
-        <link rel="stylesheet" href="styles/elementos.css">
-        <title>4Elementos</title>
-        <script type="application/javascript" src="elements.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="errorDiv">
-                <h2>Ops... Algo deu errado!</h2>
-                <p>
-                    Parece que de alguma forma você chegou na página de resultados sem responder o teste, logo, não existem resultados. Se você respondeu o teste e está vendo essa mensagem
-                    significa que o seu navegador provavelmente não tem suporte a algumas tecnologias necessárias para o funcionamento do site. Recomendamos você atualizar seu navegador e tentar novamente!
-                </p>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.webp">
+    <link rel="shortcut icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/results.css">
+    <link rel="stylesheet" href="styles/elementos.css">
+    <title>4Elementos</title>
+    <script type="application/javascript" src="elements.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="errorDiv">
+        <h2>Ops... Algo deu errado!</h2>
+        <p>
+          Parece que de alguma forma você chegou na página de resultados sem responder o teste, logo, não existem resultados. Se você respondeu o teste e está vendo essa mensagem
+          significa que o seu navegador provavelmente não tem suporte a algumas tecnologias necessárias para o funcionamento do site. Recomendamos você atualizar seu navegador e tentar novamente!
+        </p>
 
-                <button class="b-error" onclick="window.location.href='index.html'">
-                    Página Inicial
-                </button>
-            </div>
+        <button class="b-error" onclick="window.location.href='index.html'">
+          Página Inicial
+        </button>
+      </div>
 
-            <div class="resultsDiv">
-                <h2>Boas vindas!</h2>
-                <h3 id="agentName" class="whiteH3"></h3>
+      <div class="resultsDiv">
+        <h2>Boas vindas!</h2>
+        <h3 id="agentName" class="whiteH3"></h3>
 
-                <h3>Você possui afinidade com...</h3>
-                <h3 id="elementResultName" class="whiteH3"></h3>
+        <h3>Você possui afinidade com...</h3>
+        <h3 id="elementResultName" class="whiteH3"></h3>
 
-                <a href=""><img class="img" id="elementResult" src="" alt="Imagem do elemento resultado no teste"></a>
+        <a><img class="img" id="elementResult" src="" alt="Imagem do elemento resultado no teste"></a>
 
-                <h3>Descrição</h3>
-                <p id="descElement" class="centerP"></p><br>
+        <h3>Descrição</h3>
+        <p id="descElement" class="centerP"></p><br>
 
-                <a href="index.html">
-                    <button class="start">Fazer denovo</button>
-                </a><br><br>
+        <a href="index.html">
+          <button class="start">Fazer denovo</button>
+        </a><br><br>
 
-                <p>Test</p>
-            </div>
+        <p style="text-align:center;">Você pode entender mais do universo da subathon <a target="blank" href="https://meiaum.wiki.gg/pt-br/wiki/MeiaUm_Wiki">aqui</a></p>
+      </div>
 
-            <h3>Obrigado por realizar o teste!</h3>
-        </div>
+      <h3>Obrigado por realizar o teste!</h3>
+    </div>
 
-        <div class="socials">
-            <a href=""><img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial"></a>
-        </div>
+    <div class="socials">
+      <div>
+        <a target="blank" href="https://github.com/04Elementos/4elementos">
+          <img src="images/socials/github.png" alt="Ícone do GitHub" class="imgSocial">
+          <p>Projeto Original</p>
+        </a>
+      </div>
+      <p>Feito com muita preguiça por Kizzabi e Glatko</p>
+    </div>
 
-        <script>
-            setTimeout(function() {
-                if (typeof localStorage !== 'undefined') {
-                    const name = localStorage.getItem("name")
-                    const result = localStorage.getItem("results")
-                    const espectro = localStorage.getItem("espectro")
+    <script>
+    setTimeout(function() {
+      if (typeof localStorage !== 'undefined') {
+        const name = localStorage.getItem("name")
+        const result = localStorage.getItem("results")
+        const espectro = localStorage.getItem("espectro")
 
-                    if(!result && !espectro) {
-                        showErrors()
-                    } else{
-                        showResults()
-                    }
-                } else {
-                    showErrors()
-                }
-                }, 50);
+        if(!result && !espectro) {
+          showErrors()
+        } else{
+          showResults()
+        }
+      } else {
+        showErrors()
+      }
+    }, 50);
 
-            function showErrors() {
-                const errorsScreen = document.querySelector('.errorDiv');
-                const resultScreen = document.querySelector('.resultsDiv');
-                errorsScreen.style.display = 'block'
-                resultScreen.style.display = 'none'
-            }
+    function showErrors() {
+      const errorsScreen = document.querySelector('.errorDiv');
+      const resultScreen = document.querySelector('.resultsDiv');
+      errorsScreen.style.display = 'block'
+      resultScreen.style.display = 'none'
+    }
 
-            function showResults() {
-                if(localStorage.getItem("results") === "pixjumpscare") {
-                    document.getElementById("agentName").innerHTML = `Perereco Desconhecido`
-                } else{
-                    if(name) {
-                        document.getElementById("agentName").innerHTML = `Perereco ${name}`
-                    } else {
-                        document.getElementById("agentName").innerHTML = 'Perereco Desconhecido'
-                    }
-                }
+    function showResults() {
+      if(localStorage.getItem("results") === "pixjumpscare") {
+        document.getElementById("agentName").innerHTML = `Perereco Desconhecido`
+      } else{
+        if(name) {
+          document.getElementById("agentName").innerHTML = `Perereco ${name}`
+        } else {
+          document.getElementById("agentName").innerHTML = 'Perereco Desconhecido'
+        }
+      }
 
-                const img = document.getElementById("elementResult")
-                img.src = `images/elementos/${localStorage.getItem("results")}.webp`
-                img.classList.add(`${localStorage.getItem("results")}Result`);
+      const img = document.getElementById("elementResult")
+      img.src = `images/elementos/${localStorage.getItem("results")}.webp`
+      img.classList.add(`${localStorage.getItem("results")}Result`);
 
-                let userDesc;
-                if(localStorage.getItem("results") === "PixEscorregadio") {userDesc = elements.PixEscorregadio.desc} else
-                if(localStorage.getItem("results") === "BaileInsano") {userDesc = elements.BaileInsano.desc} else
-                if(localStorage.getItem("results") === "ehehe") {userDesc = elements.ehehe.desc} else
-                if(localStorage.getItem("results") === "WAJAJA") {userDesc = elements.WAJAJA.desc}
-                else {userDesc = elements.pixjumpscare.desc}
+      let userDesc;
+      if(localStorage.getItem("results") === "PixEscorregadio") {userDesc = elements.PixEscorregadio.desc} else
+      if(localStorage.getItem("results") === "BaileInsano") {userDesc = elements.BaileInsano.desc} else
+      if(localStorage.getItem("results") === "ehehe") {userDesc = elements.ehehe.desc} else
+      if(localStorage.getItem("results") === "WAJAJA") {userDesc = elements.WAJAJA.desc}
+      else {userDesc = elements.pixjumpscare.desc}
 
-                document.getElementById("elementResultName").innerHTML = localStorage.getItem("results");
-                document.getElementById("descElement").innerHTML = userDesc;
+      document.getElementById("elementResultName").innerHTML = localStorage.getItem("results");
+      document.getElementById("descElement").innerHTML = userDesc;
 
-                let originalString = localStorage.getItem("espectro")
-                spectroArray = [];
-                let previousIndex = 0;
-                for(i = 0; i < originalString.length; i++) {
-                    if (originalString[i] == ',') {
-                        separated = originalString.slice(previousIndex, i);
-                        spectroArray.push(separated);
-                        previousIndex = i + 1;
-                    }
-                }
+      let originalString = localStorage.getItem("espectro")
+      spectroArray = [];
+      let previousIndex = 0;
+      for(i = 0; i < originalString.length; i++) {
+        if (originalString[i] == ',') {
+          separated = originalString.slice(previousIndex, i);
+          spectroArray.push(separated);
+          previousIndex = i + 1;
+        }
+      }
 
-                spectroArray.push(originalString.slice(previousIndex, i));
+      spectroArray.push(originalString.slice(previousIndex, i));
 
 
-                let otherElementInfo;
+      let otherElementInfo;
 
-                if(localStorage.getItem("results") === "PixEscorregadio") {otherElementInfo = elements.PixEscorregadio.outrasInfo} else
-                if(localStorage.getItem("results") === "BaileInsano") {otherElementInfo = elements.BaileInsano.outrasInfo} else
-                if(localStorage.getItem("results") === "ehehe") {otherElementInfo = elements.ehehe.outrasInfo} else
-                if(localStorage.getItem("results") === "WAJAJA") {otherElementInfo = elements.WAJAJA.outrasInfo}
-                else {otherElementInfo = elements.pixjumpscare.outrasInfo}
+      if(localStorage.getItem("results") === "PixEscorregadio") {otherElementInfo = elements.PixEscorregadio.outrasInfo} else
+      if(localStorage.getItem("results") === "BaileInsano") {otherElementInfo = elements.BaileInsano.outrasInfo} else
+      if(localStorage.getItem("results") === "ehehe") {otherElementInfo = elements.ehehe.outrasInfo} else
+      if(localStorage.getItem("results") === "WAJAJA") {otherElementInfo = elements.WAJAJA.outrasInfo}
+      else {otherElementInfo = elements.pixjumpscare.outrasInfo}
 
-                document.getElementById("known1").innerHTML = `${otherElementInfo.agts.agt_1}`;
-                document.getElementById("known2").innerHTML = `${otherElementInfo.agts.agt_2}`;
-                document.getElementById("known3").innerHTML = `${otherElementInfo.agts.agt_3}`;
+      document.getElementById("known1").innerHTML = `${otherElementInfo.agts.agt_1}`;
+      document.getElementById("known2").innerHTML = `${otherElementInfo.agts.agt_2}`;
+      document.getElementById("known3").innerHTML = `${otherElementInfo.agts.agt_3}`;
 
-                document.getElementById("emocValue").innerHTML = `${spectroArray[0]}%`;
-                document.getElementById("soliValue").innerHTML = `${spectroArray[1]}%`;
-                document.getElementById("ordeValue").innerHTML = `${spectroArray[2]}%`;
-                document.getElementById("caosValue").innerHTML = `${spectroArray[3]}%`;
+      document.getElementById("emocValue").innerHTML = `${spectroArray[0]}%`;
+      document.getElementById("soliValue").innerHTML = `${spectroArray[1]}%`;
+      document.getElementById("ordeValue").innerHTML = `${spectroArray[2]}%`;
+      document.getElementById("caosValue").innerHTML = `${spectroArray[3]}%`;
 
-            }
-        </script>
-    </body>
+    }
+    </script>
+  </body>
 </html>
