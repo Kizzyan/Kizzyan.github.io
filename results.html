@@ -39,12 +39,25 @@
 
         <h3>Descrição</h3>
         <p id="descElement" class="centerP"></p><br>
+      </div>
+
+      <div class="otherInfo">
+        <div class="ordemKnownMembers">
+          <h3>Pererecos com o mesmo alinhamento</h3>
+          <div class ="knownPererecos">
+            <p id="known1"></p><br>
+            <p id="known2"></p><br>
+            <p id="known3"></p>
+          </div>
+        </div>
+
+        <br><br>
+        <p style="text-align:center;">Você pode entender mais do universo da subathon <a target="blank" href="https://meiaum.wiki.gg/pt-br/wiki/MeiaUm_Wiki">aqui</a></p>
 
         <a href="index.html">
           <button class="start">Fazer denovo</button>
         </a><br><br>
 
-        <p style="text-align:center;">Você pode entender mais do universo da subathon <a target="blank" href="https://meiaum.wiki.gg/pt-br/wiki/MeiaUm_Wiki">aqui</a></p>
       </div>
 
       <h3>Obrigado por realizar o teste!</h3>
@@ -122,7 +135,6 @@
 
       spectroArray.push(originalString.slice(previousIndex, i));
 
-
       let otherElementInfo;
 
       if(localStorage.getItem("results") === "PixEscorregadio") {otherElementInfo = elements.PixEscorregadio.outrasInfo} else
@@ -130,6 +142,8 @@
       if(localStorage.getItem("results") === "ehehe") {otherElementInfo = elements.ehehe.outrasInfo} else
       if(localStorage.getItem("results") === "WAJAJA") {otherElementInfo = elements.WAJAJA.outrasInfo}
       else {otherElementInfo = elements.pixjumpscare.outrasInfo}
+
+      console.log(otherElementInfo);
 
       document.getElementById("known1").innerHTML = `${otherElementInfo.agts.agt_1}`;
       document.getElementById("known2").innerHTML = `${otherElementInfo.agts.agt_2}`;

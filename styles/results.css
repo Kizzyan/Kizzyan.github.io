@@ -120,6 +120,15 @@ button:hover {
   display: none;
 }
 
+.knownPererecos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-weight: 900;
+  color: #29c429;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     width: 90%;
@@ -134,25 +143,25 @@ button:hover {
   h3 {
     margin-top: 20px;
     font-size: 16px;
-    }
-
-    p {
-        font-size: 14px;
-        text-align: justify;  
-        text-justify: newspaper;
-        margin: 2px;
-    }
-
-    img {
-        width: 80px;
-        height: 80px;
-        filter: drop-shadow(8px 8px 10px gray);
-    }
-    
-    .imgSocial {
-        margin-top: 40px;
-        width: 40px;
-        height: 40px;
-        filter: drop-shadow(4px 4px 10px gray);
-    }
   }
+
+  p {
+    font-size: 14px;
+    text-align: justify;  
+    text-justify: newspaper;
+    margin: 2px;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(8px 8px 10px gray);
+  }
+
+  .imgSocial {
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(4px 4px 10px gray);
+  }
+}

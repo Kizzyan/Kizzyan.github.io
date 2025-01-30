@@ -101,7 +101,7 @@ questions = [
   },
   {
     "id": 11,
-    "question": "Você seguiria uma ordem de músicas no sync mesmo se ela ferisse os seus valores morais.",
+    "question": "Você seguiria uma ordem de músicas no sync mesmo se ela ferisse os outros.",
     "effect": {
       "emocao": 2,
       "solidao": -2,
